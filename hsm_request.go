@@ -93,7 +93,7 @@ func main() {
 	}
 
 	// Load certificate
-	certPEM, err := os.ReadFile("pkcs.crt")
+	certPEM, err := os.ReadFile("client_cert.pem")
 	if err != nil {
 		log.Fatalf("Failed to read cert: %v", err)
 	}
