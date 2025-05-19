@@ -33,8 +33,8 @@ func main() {
 	// Configure PKCS#11
 	ctx, err := p11.Configure(&p11.Config{
 		Path:       "/opt/cloudhsm/lib/libcloudhsm_pkcs11.so", // CloudHSM PKCS#11 library
-		TokenLabel: "CLOUDHSM",                                // or use TokenSerial
-		Pin:        userPin,                                   // typically CU or CO user
+		TokenLabel: "hsm1",                                // or use TokenSerial
+		Pin:        userPIN,                                   // typically CU or CO user
 	})
 	if err != nil {
 		log.Fatalf("Failed to initialize crypto11: %v", err)
